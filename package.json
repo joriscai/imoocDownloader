@@ -1,0 +1,31 @@
+{
+  "name": "imoocdownloader",
+  "version": "1.1.0",
+  "description": "慕课网视频、资源下载工具。",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webbought/imoocDownloader.git"
+  },
+  "keywords": [
+    "imooc",
+    "download",
+    "spider",
+    "nodejs"
+  ],
+  "author": "krew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/webbought/imoocDownloader/issues"
+  },
+  "homepage": "https://github.com/webbought/imoocDownloader#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "commander": "^2.9.0",
+    "iconv-lite": "^0.4.13",
+    "request": "^2.74.0"
+  }
+}
