@@ -25,8 +25,7 @@ function HtmlLoader(url, options, callback) {
   // 获取页面数据流
   let stream = request.get({
     url: url,
-    headers: {'User-Agent': `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6
-    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36`},
+    headers: {'User-Agent': `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36`},
     timeout: options.timeout || 10000
   });
 
