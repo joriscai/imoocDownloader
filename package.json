@@ -4,7 +4,7 @@
   "description": "慕课网视频、资源下载工具。",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -t 10000  test/*.js "
   },
   "repository": {
     "type": "git",
@@ -29,8 +29,10 @@
     "request": "^2.74.0"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
     "eslint": "^3.3.1",
     "eslint-config-google": "^0.6.0",
-    "supertest": "^2.0.0"
+    "istanbul": "^0.4.5",
+    "mocha": "^3.0.2"
   }
 }
