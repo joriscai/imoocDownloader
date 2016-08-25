@@ -10,6 +10,13 @@ let iconv = require('iconv-lite');
  * @param {Function} Callback
  */
 function HtmlLoader(url, options, callback) {
+  if (!url) {
+    throw new Error('缺少参数url');
+  }
+  if (Object.prototype.toString.call(url) !== '[object String]') {
+    throw new Error('参数url必须为String');
+  }
+
   if (Object.prototype.toString.call(options) === '[object Function]') {
     callback = options;
     options = {};
@@ -24,12 +31,7 @@ function HtmlLoader(url, options, callback) {
   });
 
   stream.on('error', function(err) {
-    if (err.code === 'ETIMEDOUT') {
-      err.message = `请求页面url超时`;
-      callback(err, null);
-    } else {
-      callback(err, null);
-    }
+    callback(err, null);
   });
 
   let size = 0;
@@ -75,4 +77,4 @@ function HtmlLoader(url, options, callback) {
   });
 }
 
-module.exports = HtmlLoader;
+exports = module.exports = HtmlLoader;
