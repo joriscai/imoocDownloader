@@ -1,6 +1,6 @@
 'use strict';
 
-let gen = require('../lib/gen');
+let gen = require('../lib/ruleParser');
 let assert = require('chai').assert;
 let should = require('chai').should();
 
