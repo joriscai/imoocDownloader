@@ -2,17 +2,23 @@
 
 let vm = require('vm');
 let cheerio = require('cheerio');
-let rule = require('../conf/rule');
 let ruleParser = require('../lib/ruleParser');
 
-
+/**
+ * [HtmlParser description]
+ * @param {[type]} html [description]
+ */
 function HtmlParser(html) {
   vm.createContext(this);
   this.$ = this.dom = cheerio.load(html);
 }
 
-
-HtmlParser.prototype.getter = function(opts,callback) {
+/**
+ * [getter description]
+ * @param  {[type]}   opts     [description]
+ * @param  {Function} callback [description]
+ */
+HtmlParser.prototype.getter = function(opts, callback) {
   this.opts = opts;
   this.callback = callback;
   let query = ruleParser(opts.rule);
@@ -24,7 +30,7 @@ HtmlParser.prototype.getter = function(opts,callback) {
       }else{
         callback(null,$(ele).text());
       }
-    });`, 
+    });`,
     this
   );
-}
+};

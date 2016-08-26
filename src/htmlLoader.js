@@ -5,9 +5,9 @@ let iconv = require('iconv-lite');
 
 /**
  * HtmlLoader
- * @param {String} The target page url
- * @param {Object} Options (Optional)
- * @param {Function} Callback
+ * @param {String} url 目标地址
+ * @param {Object} options 配置
+ * @param {Function} callback 回调函数
  */
 function HtmlLoader(url, options, callback) {
   if (!url) {

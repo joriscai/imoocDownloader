@@ -4,7 +4,8 @@
   "description": "慕课网视频、资源下载工具。",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -t 10000 test/*.js --report lcovonly -R spec && ./node_modules/.bin/codecov -t dd882977-b9ed-49df-ada7-ff157884fb5b"
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -t 10000 test/*.js --report lcovonly -R spec && ./node_modules/.bin/codecov -t dd882977-b9ed-49df-ada7-ff157884fb5b",
+    "eslint" : "./node_modules/.bin/eslint src/"
   },
   "repository": {
     "type": "git",
