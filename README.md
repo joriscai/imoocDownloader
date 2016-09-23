@@ -1,4 +1,5 @@
 # imoocDownloader
+[![Build Status](https://travis-ci.org/webbought/imoocDownloader.svg?branch=v1.1.0)](https://travis-ci.org/webbought/imoocDownloader) 
 
 ###简介
 
@@ -22,16 +23,14 @@ npm install
 'use strict'
 
 module.exports = {
-    rootDir : __dirname,
-    timeout : 10,
     videoDir : './video',
-    target : [552,556,21,441,11]
+    targets : [552,556,21,441,11]
 }
 ```
 
 #####配置好config文件，执行 `node index.js`即可。 
  
-###命令行用法
+###指令模式
 ```shell
 node index.js <command> <arguments>
 ```
@@ -46,17 +45,17 @@ node index.js <command> <arguments>
     
 ####example
 ```shell
-node index.js --search node
+node index.js --search mongodb
 ```
 ![search][1]
 
 ```shell
-node index.js --list 434
+node index.js --list 578
 ```
 ![list][2]
 
 ```shell
-node index.js --download 434
+node index.js --download 578
 ```
 ![download][3]
 ```
